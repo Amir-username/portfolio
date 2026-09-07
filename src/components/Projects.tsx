@@ -53,7 +53,7 @@ function ProjectCard({ project }: { project: Project }) {
               rel="noreferrer"
               className="flex items-center gap-1.5 text-slate-300 hover:text-cyan-400 transition-colors"
             >
-              <FiExternalLink /> دموی زنده
+              <FiExternalLink /> {project.demoLabel ?? "دموی زنده"}
             </a>
           )}
         </div>

@@ -3,10 +3,10 @@ export interface Project {
   description: string;
   tech: string[];
   demoUrl?: string;
+  demoLabel?: string;
   githubUrl?: string;
   image?: string;
 }
-
 export interface Experience {
   role: string;
   company: string;
@@ -84,15 +84,39 @@ export const experiences: Experience[] = [
   },
 ];
 
-// 📌 پروژه‌ها رو بعداً اینجا اضافه می‌کنیم؛ فعلاً خالی می‌مونه
 export const projects: Project[] = [
-  // ساختار هر پروژه:
-  // {
-  //   title: 'نام پروژه',
-  //   description: 'توضیح کوتاه',
-  //   tech: ['React', 'TypeScript'],
-  //   demoUrl: 'https://...',
-  //   githubUrl: 'https://github.com/...',
-  //   image: '/images/project.jpg',
-  // },
+  {
+    title: "کارپرداز — سامانه مدیریت کارها (بکند)",
+    description:
+      "بکند سامانه مدیریت کارها با Python و FastAPI. پیاده‌سازی REST API برای امکانات ثبت، پیگیری و مدیریت وضعیت کارها، به‌همراه مستندات تعاملی OpenAPI (Swagger) که امکان تست مستقیم endpointها رو فراهم می‌کنه. فرانت‌اند این سامانه به‌صورت پروژه‌ی جداگانه در همین پورتفولیو موجود است.",
+    tech: ["Python", "FastAPI", "REST API"],
+    demoLabel: "مستندات API (Swagger)",
+    demoUrl: "https://karpardaz-backend.fastapicloud.dev/docs",
+    githubUrl: "https://github.com/Amir-username/karpardaz-backend",
+  },
+  {
+    title: "کارپرداز — سامانه مدیریت کارها (فرانت‌اند)",
+    description:
+      "فرانت‌اند سامانه مدیریت کارها و درخواست‌ها با رابط کاربری واکنش‌گرا و راست‌چین. شامل امکانات ثبت، پیگیری و مدیریت وضعیت کارها است که با REST API بکندِ همین سامانه (پروژه‌ی بالا) ارتباط برقرار می‌کند.",
+    tech: ["React", "TypeScript", "TailwindCSS"],
+    demoUrl: "https://karpardaz-frontend.vercel.app/",
+    githubUrl: "https://github.com/Amir-username/karpardaz-frontend",
+  },
+  {
+    title: "سرویس چت آنلاین — بکند",
+    description:
+      "بکند سرویس پیام‌رسانی آنلاین با Python و FastAPI. ارتباط ریل‌تایم با WebSocket برای ارسال و دریافت پیام لحظه‌ای، به‌همراه مستندات تعاملی OpenAPI (Swagger). اپلیکیشن چتِ فرانت‌اند متصل به این سرویس نیز به‌صورت پروژه‌ی جداگانه در همین پورتفولیو موجود است.",
+    tech: ["Python", "FastAPI", "WebSocket"],
+    demoLabel: "مستندات API (Swagger)",
+    demoUrl: "https://chat-service.fastapicloud.dev/docs",
+    githubUrl: "https://github.com/Amir-username/chat-service",
+  },
+  {
+    title: "چت آنلاین ریل‌تایم (فرانت‌اند)",
+    description:
+      "اپلیکیشن چت آنلاین با قابلیت ارسال و دریافت پیام به‌صورت لحظه‌ای بدون نیاز به رفرش صفحه. ارتباط ریل‌تایم با WebSocket و اتصال به بکند سرویس چت (پروژه‌ی بالا) و رابط کاربری واکنش‌گرا و راست‌چین.",
+    tech: ["React", "TypeScript", "WebSocket", "TailwindCSS"],
+    demoUrl: "https://chat-frontend-psi-wine.vercel.app/",
+    githubUrl: "https://github.com/Amir-username/chat-frontend",
+  },
 ];
