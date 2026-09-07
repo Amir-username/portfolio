@@ -9,6 +9,7 @@ const links = [
   { href: "#experience", label: "سابقه کاری" },
   { href: "#projects", label: "نمونه‌پروژه‌ها" },
   { href: "#contact", label: "تماس" },
+  { href: "/?view=resume", label: "رزومه" },
 ];
 
 export default function Navbar() {
