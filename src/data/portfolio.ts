@@ -86,36 +86,43 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
-    title: "کارپرداز — سامانه مدیریت کارها (بکند)",
+    title: "کارپرداز — پلتفرم کاریابی و استخدام (بکند)",
     description:
-      "بکند سامانه مدیریت کارها با Python و FastAPI. پیاده‌سازی REST API برای امکانات ثبت، پیگیری و مدیریت وضعیت کارها، به‌همراه مستندات تعاملی OpenAPI (Swagger) که امکان تست مستقیم endpointها رو فراهم می‌کنه. فرانت‌اند این سامانه به‌صورت پروژه‌ی جداگانه در همین پورتفولیو موجود است.",
-    tech: ["Python", "FastAPI", "REST API"],
+      "بکند پلتفرم کاریابی و استخدام با Python و FastAPI. هم کارفرما و هم کارجو می‌توانند در پلتفرم آگهی ثبت کنند و سیستم پیشنهاددهنده با scikit-learn و شباهت کسینوسی (Cosine Similarity)، متناسب‌ترین آگهی‌ها را به هر کاربر پیشنهاد می‌دهد. ذخیره‌سازی داده‌ها در PostgreSQL با SQLAlchemy و پیاده‌سازی REST API به‌همراه مستندات تعاملی OpenAPI (Swagger) برای تست مستقیم endpointها. فرانت‌اند این پلتفرم به‌صورت پروژه‌ی جداگانه در همین پورتفولیو موجود است.",
+    tech: [
+      "Python",
+      "FastAPI",
+      "SQLAlchemy",
+      "PostgreSQL",
+      "scikit-learn",
+      "REST API",
+    ],
     demoLabel: "مستندات API (Swagger)",
     demoUrl: "https://karpardaz-backend.fastapicloud.dev/docs",
     githubUrl: "https://github.com/Amir-username/karpardaz-backend",
   },
   {
-    title: "کارپرداز — سامانه مدیریت کارها (فرانت‌اند)",
+    title: "کارپرداز — پلتفرم کاریابی و استخدام (فرانت‌اند)",
     description:
-      "فرانت‌اند سامانه مدیریت کارها و درخواست‌ها با رابط کاربری واکنش‌گرا و راست‌چین. شامل امکانات ثبت، پیگیری و مدیریت وضعیت کارها است که با REST API بکندِ همین سامانه (پروژه‌ی بالا) ارتباط برقرار می‌کند.",
-    tech: ["React", "TypeScript", "TailwindCSS"],
+      "فرانت‌اند پلتفرم کاریابی و استخدام با رابط کاربری واکنش‌گرا و راست‌چین. کارفرما و کارجو هر دو امکان ثبت و مدیریت آگهی دارند و پیشنهادهای هوشمندِ سیستم یادگیری ماشین (از سمت بکند) به کاربر نمایش داده می‌شود. ارتباط با سرور با Axios و متصل به REST API بکندِ همین پلتفرم (پروژه‌ی بالا).",
+    tech: ["React", "TypeScript", "TailwindCSS", "Axios"],
     demoUrl: "https://karpardaz-frontend.vercel.app/",
     githubUrl: "https://github.com/Amir-username/karpardaz-frontend",
   },
   {
     title: "سرویس چت آنلاین — بکند",
     description:
-      "بکند سرویس پیام‌رسانی آنلاین با Python و FastAPI. ارتباط ریل‌تایم با WebSocket برای ارسال و دریافت پیام لحظه‌ای، به‌همراه مستندات تعاملی OpenAPI (Swagger). اپلیکیشن چتِ فرانت‌اند متصل به این سرویس نیز به‌صورت پروژه‌ی جداگانه در همین پورتفولیو موجود است.",
-    tech: ["Python", "FastAPI", "WebSocket"],
+      "بکند سرویس پیام‌رسانی آنلاین با Python و FastAPI. ارسال و دریافت پیام به‌صورت لحظه‌ای با WebSocket و مدیریت تمیز تنظیمات و متغیرهای محیطی پروژه با Pydantic Settings. سیستم احراز هویت با پکیج fast-auth پیاده‌سازی شده است؛ پکیجی که خودم برای FastAPI توسعه داده‌ام. مستندات تعاملی OpenAPI (Swagger) امکان تست مستقیم endpointها را فراهم می‌کند و اپلیکیشن چت فرانت‌اند متصل به این سرویس نیز در همین پورتفولیو موجود است.",
+    tech: ["Python", "FastAPI", "Pydantic Settings", "fast-auth", "WebSocket"],
     demoLabel: "مستندات API (Swagger)",
     demoUrl: "https://chat-service.fastapicloud.dev/docs",
     githubUrl: "https://github.com/Amir-username/chat-service",
   },
   {
-    title: "چت آنلاین ریل‌تایم (فرانت‌اند)",
+    title: "چت آنلاین  (فرانت‌اند)",
     description:
-      "اپلیکیشن چت آنلاین با قابلیت ارسال و دریافت پیام به‌صورت لحظه‌ای بدون نیاز به رفرش صفحه. ارتباط ریل‌تایم با WebSocket و اتصال به بکند سرویس چت (پروژه‌ی بالا) و رابط کاربری واکنش‌گرا و راست‌چین.",
-    tech: ["React", "TypeScript", "WebSocket", "TailwindCSS"],
+      "اپلیکیشن چت آنلاین با قابلیت ارسال و دریافت پیام به‌صورت لحظه‌ای بدون نیاز به رفرش صفحه. ارتباط ریل‌تایم با WebSocket و اتصال به بکند سرویس چت (پروژه‌ی بالا). مدیریت استیت اپلیکیشن با Zustand، ارتباط با سرور با Axios و رابط کاربری واکنش‌گرا و راست‌چین با TailwindCSS.",
+    tech: ["React", "TypeScript", "Vite", "TailwindCSS", "Zustand", "Axios"],
     demoUrl: "https://chat-frontend-psi-wine.vercel.app/",
     githubUrl: "https://github.com/Amir-username/chat-frontend",
   },
