@@ -42,3 +42,20 @@ body {
       transparent 60%
     );
 }
+
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
+  body {
+    background: white !important;
+  }
+}
+
+/* حفظ رنگ‌ها و گرادیان‌ها هنگام چاپ */
+.resume-root {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}

@@ -6,8 +6,14 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Resume from "./components/Resume";
 
 export default function App() {
+  const isResume =
+    new URLSearchParams(window.location.search).get("view") === "resume";
+
+  if (isResume) return <Resume />;
+
   return (
     <>
       <Navbar />
