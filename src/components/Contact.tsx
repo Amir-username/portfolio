@@ -1,5 +1,5 @@
 import { personalInfo } from "../data/portfolio";
-import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiPhone } from "react-icons/fi";
 import SectionTitle from "./SectionTitle";
 
 const socialClass =
@@ -16,12 +16,20 @@ export default function Contact() {
           درباره‌ی تکنولوژی، خوشحال می‌شوم در ارتباط باشیم.
         </p>
 
-        <a
-          href={`mailto:${personalInfo.email}`}
-          className="inline-flex items-center gap-2.5 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-7 py-3.5 rounded-lg transition-colors mb-10"
-        >
-          <FiMail /> {personalInfo.email}
-        </a>
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
+          <a
+            href={`mailto:${personalInfo.email}`}
+            className="inline-flex items-center gap-2.5 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-7 py-3.5 rounded-lg transition-colors"
+          >
+            <FiMail /> {personalInfo.email}
+          </a>
+          <a
+            href={`tel:${personalInfo.phone.replace(/\s/g, "")}`}
+            className="inline-flex items-center gap-2.5 border border-slate-700 hover:border-cyan-400 hover:text-cyan-300 text-slate-300 font-bold px-7 py-3.5 rounded-lg transition-colors"
+          >
+            <FiPhone /> <span dir="ltr">{personalInfo.phone}</span>
+          </a>
+        </div>
 
         <div className="flex justify-center gap-4">
           <a
@@ -33,15 +41,17 @@ export default function Contact() {
           >
             <FiGithub />
           </a>
-          <a
-            href={personalInfo.linkedin}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="LinkedIn"
-            className={socialClass}
-          >
-            <FiLinkedin />
-          </a>
+          {personalInfo.linkedin && (
+            <a
+              href={personalInfo.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              className={socialClass}
+            >
+              <FiLinkedin />
+            </a>
+          )}
         </div>
       </div>
     </section>

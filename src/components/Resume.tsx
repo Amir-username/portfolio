@@ -11,6 +11,7 @@ import {
   FiMail,
   FiPrinter,
   FiUser,
+  FiPhone,
 } from "react-icons/fi";
 import {
   experiences,
@@ -115,6 +116,15 @@ export default function Resume() {
               <FiMail size={14} className="text-blue-600 shrink-0" />
               <span className="text-xs font-medium text-slate-700">
                 {personalInfo.email}
+              </span>
+            </a>
+            <a
+              href={`tel:${personalInfo.phone.replace(/\s/g, "")}`}
+              className={contactPill}
+            >
+              <FiPhone size={14} className="text-blue-600 shrink-0" />
+              <span className="text-xs font-medium text-slate-700">
+                {personalInfo.phone}
               </span>
             </a>
             <a
