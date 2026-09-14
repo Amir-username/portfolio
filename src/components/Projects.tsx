@@ -53,7 +53,7 @@ function ProjectCard({ project }: { project: Project }) {
                 className="flex-1 min-w-32 inline-flex items-center justify-center gap-2 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-300 text-sm font-medium px-4 py-2.5 rounded-lg transition-colors"
               >
                 <FiExternalLink aria-hidden />{" "}
-                {project.demoLabel ?? "دموی زنده"}
+                {project.demoLabel ?? "دمو آنلاین"}
               </a>
             )}
           </div>
